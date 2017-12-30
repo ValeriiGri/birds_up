@@ -1,0 +1,9 @@
+
+.img-block img{
+	width: 100%;
+}
+
+.bg-wrapper {
+	background: url(blue-bg.png);
+	margin: 50px 0;
+}

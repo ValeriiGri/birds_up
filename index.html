@@ -11,6 +11,7 @@
 		<div class="img-block">
 			<img src="Dubsured_Step2_illustration.svg" alt="">
 		</div>
+		<div class="birds"></div>
 
 		<script>
 			// Based on http://www.openprocessing.org/visuals/?visualID=6910
@@ -196,11 +197,11 @@
 				scene.background = new THREE.Color( 0xffffff );
 				birds = [];
 				boids = [];
-				for ( var i = 0; i < 128; i ++ ) {
+				for ( var i = 0; i < 64; i ++ ) {
 					boid = boids[ i ] = new Boid();
-					boid.position.x = Math.random() * 400 - 128;
-					boid.position.y = Math.random() * 400 - 128;
-					boid.position.z = Math.random() * 400 - 128;
+					boid.position.x = Math.random() * 400 - 64;
+					boid.position.y = Math.random() * 400 - 64;
+					boid.position.z = Math.random() * 400 - 64;
 					boid.velocity.x = Math.random() * 2 - 1;
 					boid.velocity.y = Math.random() * 2 - 1;
 					boid.velocity.z = Math.random() * 2 - 1;
@@ -211,10 +212,12 @@
 					scene.add( bird );
 				}
 				renderer = new THREE.CanvasRenderer();
+				// renderer = new THREE.CanvasRenderer( { alpha: true });
+    // 			renderer.setClearColor( 0xffffff, 0 );
 				renderer.setPixelRatio( window.devicePixelRatio );
 				renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
 				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-				document.body.appendChild( renderer.domElement );
+				document.querySelector('.birds').appendChild( renderer.domElement );
 				//stats = new Stats();
 				//document.getElementById( 'container' ).appendChild(stats.dom);
 				

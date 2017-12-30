@@ -27,8 +27,6 @@ THREE.SpriteCanvasMaterial.prototype.clone = function () {
 
 };
 
-//
-
 THREE.CanvasRenderer = function ( parameters ) {
 
 	console.log( 'THREE.CanvasRenderer', THREE.REVISION );
@@ -225,7 +223,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 	this.setClearColorHex = function ( hex, alpha ) {
 
 		console.warn( 'THREE.CanvasRenderer: .setClearColorHex() is being removed. Use .setClearColor() instead.' );
-		this.setClearColor( hex, alpha );
+		this.setClearColor( hex, alpha);
 
 	};
 
@@ -932,7 +930,7 @@ THREE.CanvasRenderer = function ( parameters ) {
 
 		} else {
 
-			setFillStyle( 'rgba( 0, 0, 0, 1)' );
+			setFillStyle( 'rgba( 0, 0, 0, 0.1)' );
 			_context.fill();
 			return;
 

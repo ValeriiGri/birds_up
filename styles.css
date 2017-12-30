@@ -1,4 +1,8 @@
 
+.img-block{
+	z-index: 999;
+	position: relative; 
+}
 .img-block img{
 	width: 100%;
 }
@@ -6,4 +10,16 @@
 .bg-wrapper {
 	background: url(blue-bg.png);
 	margin: 50px 0;
+	position: relative; 
+	z-index: 9999;
+}
+
+.birds{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 990;
+}
+canvas{
+	height:50% !important;
 }

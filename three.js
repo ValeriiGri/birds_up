@@ -23842,7 +23842,6 @@
 		Object3D.call( this );
 
 		this.type = 'Scene';
-
 		this.background = null;
 		this.fog = null;
 		this.overrideMaterial = null;
